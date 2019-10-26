@@ -6,17 +6,19 @@ import {
   USER_LOADED,
   AUTH_ERROR,
   LOGIN_SUCCESS,
-  LOGIN_FAIL
+  LOGIN_FAIL,
+  LOGOUT,
+  CLEAR_PROFILE
 } from './type';
 import setAuthToken from '../utils/setAuthToken';
 
 // Load User
-export const loadUser = () => async dispatch => {
-  if(localStorage.token){
-    setAuthToken(localStorage.token);
-
+export const loadUser = (resToken) => async dispatch => {
+  if(resToken){
+    setAuthToken(resToken.data.token);
   }
-
+  console.log(resToken)
+  
   try {
     const res = await axios.get('/api/auth');
 
@@ -24,7 +26,10 @@ export const loadUser = () => async dispatch => {
       type: USER_LOADED,
       payload: res.data
     })
-  } catch (err) {
+  } 
+  catch (err) {
+    // console.log(err);
+    // console.log(res.data);
     dispatch({
       type: AUTH_ERROR
 
@@ -49,7 +54,7 @@ export const register = ({ name, email, password}) => async dispatch => {
       type: REGISTER_SUCCESS,
       payload: res.data
     });
-    dispatch(loadUser());
+    dispatch(loadUser(res));
   } catch (err) {
       const errors = err.response.data.errors;
 
@@ -68,8 +73,12 @@ export const register = ({ name, email, password}) => async dispatch => {
 export const login = ( email, password) => async dispatch => {
   const config = {
     headers: {
-      'Content-Type': 'application/json'
-    }
+      'Content-Type': 'application/json',
+      // 'x-auth-token': 'Bearer '+ res.data.token
+  }
+    // headers: {
+    //   'Content-Type': 'application/json'
+    // }
   }; 
 
   const body = JSON.stringify({ email, password});
@@ -81,7 +90,7 @@ export const login = ( email, password) => async dispatch => {
       payload: res.data
     });
 
-    dispatch(loadUser());
+    dispatch(loadUser(res));
   } catch (err) {
       const errors = err.response.data.errors;
 
@@ -93,3 +102,12 @@ export const login = ( email, password) => async dispatch => {
     });
   }
 };
+
+//LOGOUT / CLEAR PROFILE
+
+export const logout = () => dispatch => {
+  dispatch ({ type: CLEAR_PROFILE});
+  dispatch ({ type: LOGOUT});
+  
+  
+}

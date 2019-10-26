@@ -54,7 +54,7 @@ register({ name, email, password });
 
    // redirect if registred
    if (isAuthenticated){
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/login" />;
   };
   return (
     <Fragment>

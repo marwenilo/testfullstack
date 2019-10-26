@@ -5,6 +5,12 @@ import Landing from './components/layout/Landing';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Alert from './components/layout/Alert';
+import Dashboard from './components/dashboard/Dashboard';
+import CreatProfile from './components/profile-form/CreatProfile';
+import EditProfile from './components/profile-form/EditProfile';
+import Profiles from './components/profiles/Profiles';
+
+import PrivateRoute from './components/routing/PrivateRoute';
 
 //redux
 import { Provider } from 'react-redux';
@@ -32,6 +38,12 @@ store.dispatch(loadUser());
             <Switch>
              <Route exact path="/register" component={ Register } />
              <Route exact path="/login" component={ Login } />
+             <Route exact path="/profiles" component={ Profiles } />
+
+             <PrivateRoute exact path="/dashboard" component={ Dashboard } />
+             <PrivateRoute exact path="/create-profile" component={ CreatProfile } />
+              <PrivateRoute exact path="/edit-profile" component={ EditProfile } />
+
             </Switch>
          </section>
      </Fragment>
