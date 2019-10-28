@@ -13,6 +13,14 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   Developers
   
   </Link></li>
+
+{/* //hedhi tetbadel lel guestlinks */}
+<li><Link to="/posts">
+  
+  Posts
+  
+  </Link></li>
+
       
 <li><Link to="/dashboard">
   

@@ -9,7 +9,8 @@ import Dashboard from './components/dashboard/Dashboard';
 import CreatProfile from './components/profile-form/CreatProfile';
 import EditProfile from './components/profile-form/EditProfile';
 import Profiles from './components/profiles/Profiles';
-
+import Profile from './components/profile/Profile';
+import Posts from './components/posts/Posts';
 import PrivateRoute from './components/routing/PrivateRoute';
 
 //redux
@@ -39,10 +40,13 @@ store.dispatch(loadUser());
              <Route exact path="/register" component={ Register } />
              <Route exact path="/login" component={ Login } />
              <Route exact path="/profiles" component={ Profiles } />
+             <Route exact path="/profile/:id" component={ Profile } />
 
              <PrivateRoute exact path="/dashboard" component={ Dashboard } />
              <PrivateRoute exact path="/create-profile" component={ CreatProfile } />
               <PrivateRoute exact path="/edit-profile" component={ EditProfile } />
+              {/* //hedhi tetbadel nrml route */}
+              <PrivateRoute exact path="/posts" component={ Posts } />
 
             </Switch>
          </section>
