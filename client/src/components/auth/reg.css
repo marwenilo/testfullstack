@@ -13,7 +13,7 @@
 /* ==========================================================================
    #GRID
    ========================================================================== */
-.row {
+/* .row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -22,7 +22,7 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
+} */
 
 .row-space {
   -webkit-box-pack: justify;
@@ -32,17 +32,17 @@
   justify-content: space-between;
 }
 
-.col-2 {
+/* .col-2 {
   width: -webkit-calc((100% - 60px) / 2);
   width: -moz-calc((100% - 60px) / 2);
   width: calc((100% - 60px) / 2);
-}
+} */
 
-@media (min-width: 767px) {
+/* @media (min-width: 767px) {
   .col-2 {
     width: 100%;
   }
-}
+} */
 
 /* ==========================================================================
    #BOX-SIZING
@@ -164,13 +164,19 @@ h6 {
 .bg-red {
   background: #fa4251;
 }
-
+.centerBtn{
+  display: flex;
+  justify-content: center;
+}
+.myP{
+  color:#BEA42E
+}
 .bg-gra-01 {
-  background: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a18cd1));
-  background: -webkit-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-  background: -moz-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-  background: -o-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-  background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#BEA42E), to(#037367));
+  background: -webkit-linear-gradient(bottom, #BEA42E 0%, #037367 100%);
+  background: -moz-linear-gradient(bottom, #BEA42E 0%, #037367 100%);
+  background: -o-linear-gradient(bottom, #BEA42E 0%, #037367 100%);
+  background: linear-gradient(to top, #BEA42E 0%, #037367 100%);
 }
 
 /* ==========================================================================
@@ -463,7 +469,7 @@ input {
    ========================================================================== */
 .title {
   font-size: 24px;
-  color: #fff;
+  color: #BEA42E;
   font-weight: 400;
   margin-bottom: 36px;
 }
@@ -492,7 +498,8 @@ input {
 }
 
 .card-3 .card-heading {
-  background: url("./bg-heading-03.jpg") top left/cover no-repeat;
+  background: url("./tourf.jpg") top left/cover no-repeat;
+  background-position: 45%;
   display: table-cell;
   width: 50%;
 }

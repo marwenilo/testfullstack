@@ -10,14 +10,14 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 <ul>
 <li ><Link to="/profiles">
   
-  Developers
+   <span className="nav-item">Developers</span>
   
   </Link></li>
 
 {/* //hedhi tetbadel lel guestlinks */}
 <li><Link to="/posts">
   
-  Posts
+   <span className="nav-item">Posts</span>
   
   </Link></li>
 
@@ -31,7 +31,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <li>
       <a onClick={logout} href='#!'>
         <i className="fas fa-sign-out-alt"></i>{' '}
-        <span className="hide-sm">logout</span></a>
+        <span className="nav-item hide-sm">logout</span></a>
       </li>
   
   </ul>

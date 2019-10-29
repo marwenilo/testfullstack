@@ -120,8 +120,9 @@ register({ name, email, password });
             <div className="card card-3">
                 <div className="card-heading"></div>
                 <div className="card-body">
-                    <h2 className="title">Registration Info</h2>
-                    <form method="POST">
+                    <div className="centerBtn"> <h2 className="title myP">Registration Info</h2> </div>
+                    
+                    <form className="form" onSubmit={e =>onSubmit(e)}>
                         <div className="input-group">
                             <input className="input--style-3" type="text" placeholder="Name" name="name"
                             value={name} 
@@ -143,6 +144,11 @@ register({ name, email, password });
                             />
                         </div>
                         <div className="input-group">
+                            <div className="rs-select2 js-select-simple select--no-search">
+                                
+                            </div>
+                        </div>
+                        <div className="input-group">
                             <input className="input--style-3" type="password"
                             placeholder="Password"
                             name="password"
@@ -151,6 +157,11 @@ register({ name, email, password });
                              required 
                             minLength="6"
                             />
+                        </div>
+                        <div className="input-group">
+                            <div className="rs-select2 js-select-simple select--no-search">
+                                
+                            </div>
                         </div>
                         <div className="input-group">
                             <input className="input--style-3" type="password"
@@ -162,13 +173,13 @@ register({ name, email, password });
                              minLength="6"
                             />
                         </div>
-                        <div className="p-t-10">
+                        <div className="p-t-10 centerBtn">
                             <button className="btn btn--pill btn--green" type="submit"
                             value="Register"
                             >Submit</button>
                         </div>
                     </form>
-                    <p className="my-1">
+                    <p className="my-1 myP">
                             Already have an account? <Link to="/login">Sign In</Link>
                          </p>
                 </div>
