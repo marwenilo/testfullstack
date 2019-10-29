@@ -1,7 +1,7 @@
 {
   "name": "fullstacktest",
   "version": "1.0.0",
-  "description": "social net for dev",
+  "description": "social net for Ttrav",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -12,6 +12,8 @@
   "author": "Marwen Magri",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.5.1",
     "bcryptjs": "^2.4.3",
     "config": "^3.2.3",
     "express": "^4.17.1",

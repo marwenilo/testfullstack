@@ -8,7 +8,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const authLinks = (
 <ul>
-<li><Link to="/profiles">
+<li ><Link to="/profiles">
   
   Developers
   
@@ -22,10 +22,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   </Link></li>
 
       
-<li><Link to="/dashboard">
+<li ><Link to="/dashboard">
   
 <i className="fas fa-user"></i>{' '}
-<span>Dashboard</span>
+<span className="nav-item" >Dashboard</span>
 
 </Link></li>
     <li>
@@ -37,27 +37,28 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   </ul>
   );
   const gestLinks  = (
-    <ul>
-    <li><Link to="/profiles">
+    <ul >
+    <li className="nav-item active"><Link className="nav-link"  to="/profiles">
   
   Developers
   
   </Link></li>
-    <li><Link to="/register">Register</Link></li>
-    <li><Link to="/login">Login</Link></li>
+    <li className="nav-item "><Link className="nav-link" to="/register">Register</Link></li>
+    <li className="nav-item "><Link  className="nav-link" to="/login">Login</Link></li>
   </ul>
     );
 
 
   return (
-    <nav className="navbar bg-dark">
-    <h1>
-      <Link to="/"><i className="fas fa-code"></i> DevConnector</Link>
-    </h1>
+    <nav className="navbar navbar-expand-lg navbar-dark">
+    <h3 className="navbar-brand">
+      <Link className="logos" to="/">Travel Like Nomade</Link>
+    </h3>
       { !loading && (<Fragment> {isAuthenticated ? authLinks : gestLinks }  
         </Fragment>)}
     
   </nav>
+
   );
 };
 
