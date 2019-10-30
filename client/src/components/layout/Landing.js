@@ -95,7 +95,7 @@ const Landing = ({ isAuthenticated }) => {
         </Fab>
           </section >
           <section className="travelImages">
-        {travel.map(e=>(<img src={e.img} className="travelImg"/>))}
+        {travel.map(e=>(<img src={e.img} alt='img' className="travelImg"/>))}
           </section>
           <div className="signup">
         <h2>Join our travel community today</h2>
