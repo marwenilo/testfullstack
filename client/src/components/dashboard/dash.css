@@ -1,0 +1,35 @@
+/* body {
+  background: url("./s.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+} */
+
+
+.cont{
+  height: 100vh;
+  background: url("./s.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 100px;
+
+}
+.leads{
+  color: aliceblue;
+  margin: 30px 0  ;
+  font-size: 30px;
+  padding: 20px;
+  color: black;
+  border-radius: 50px;
+  background-color:rgb(192,192,192);opacity:0.6;
+  
+}
+.btndel {
+  margin-bottom: 30px !important;
+}
+
+ 
