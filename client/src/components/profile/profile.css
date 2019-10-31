@@ -1,0 +1,56 @@
+.profileAbout {
+  /* cdf3ef */
+  grid-area: about;
+  text-align: center;
+  justify-content: center;
+  margin: 0rem 15rem ;
+ text-align:center;
+ background: linear-gradient(to left, #e2f5f3 0%, #cdf3ef 100%);
+ border-radius: 0.5rem;
+ }
+ .aboutTitle{
+  color:#037367;
+ }
+ .profileAbout .skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+ }
+ .profileTop {
+  grid-area: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 15rem 0;
+ text-align:center;
+ background:linear-gradient(to left, #cdf3ef 0%, #037367 100%);
+ border-radius: 0.5rem;
+ color:white;
+ }
+ .profileTop img {
+  width: 250px;
+ }
+ .profileTop .icons a {
+  color: #fff;
+  margin: 0 0.3rem;
+ }
+ .round-img {
+  border-radius: 50%;
+  /* width:150px;
+  height:150px; */
+    /* border-radius: 150px; */
+    /* margin-top: -50px;  */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .memberAdress .memberJob{
+  color:white
+ }
+.profile-grid{
+  padding: 20px !important;
+  margin: 10px 0;
+}

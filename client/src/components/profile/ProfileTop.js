@@ -3,21 +3,21 @@ import PropTypes from 'prop-types';
 
 const ProfileTop = ({profile: {
   status,
-  company,
+  // company,
   location,
   social,
   user: { name, avatar }
 }}) => {
   return (
-    <div className="profile-top bg-primary p-2">
+    <div className="profileTop">
     <img
       className="round-img my-1"
       src={avatar}
       alt="avatar"
     />
-    <h1 className="large">{name}</h1>
-    <p className="lead"> {status} {company && <span>at {company} </span> } </p>
-    <p>{location && <span>{location}</span>}</p>
+    <h1 className="memberName">{name.toUpperCase()}</h1>
+    <p className="memberJob"> {status}   </p>
+    <p className="memberAdress">{location && <span>{location}</span>}</p>
     <div className="icons my-1">
       
       {

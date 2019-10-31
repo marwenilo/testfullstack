@@ -352,7 +352,7 @@ button {
 }
 
 /* Profiles Page */
-.profile {
+/* .profile {
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
   align-items: center;
@@ -360,10 +360,10 @@ button {
   padding: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
-}
+} */
 
 /* Profile Page */
-.profile-grid {
+/* .profile-grid {
   display: grid;
   grid-template-areas:
     'top top'
@@ -371,7 +371,7 @@ button {
     'exp edu'
     'github github';
   grid-gap: 1rem;
-}
+} */
 
 .profile-top {
   grid-area: top;
@@ -456,16 +456,21 @@ button {
 }
 
 /* Posts Page */
+.post-form{
+margin: 15% 30%;
+
+}
 .post-form .post-form-header {
+  
   background: var(--primary-color);
   padding: 0.5rem;
 }
 
 .post {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-gap: 2rem;
-  align-items: center;
+  display: flex;
+  flex-direction:column;
+  /* margin: 0 20%; */
+  /* align-items: center; */
 }
 
 .post > div:first-child {
@@ -883,4 +888,53 @@ margin-top: 10px !important;
 .navbarRight{
   align-items: center;
     display: flex;
+}
+
+
+
+/* posts */
+
+.Contan{
+  display:flex;
+  flex-direction:column;
+  align-self: center;
+  margin: 30px 30%;
+ max-width:620px ;
+  padding-bottom: 10px;
+  background-color: azure;
+
+-webkit-box-shadow: 0px 0px 19px -3px rgba(97,97,97,0.34);
+-moz-box-shadow: 0px 0px 19px -3px rgba(97,97,97,0.34);
+border-radius: 10px;
+box-shadow: 0px 0px 33px 2px rgba(97,97,97,0.34);
+}
+
+.round-imgr{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.textConta{
+  display: flex;
+}
+.userConta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.postP{
+  padding: 3px;
+  align-self: flex-end;
+  font-size: 11px !important;
+}
+.postP2{
+  font-size: 20px !important;
+  align-self: flex-start;
+  /* font-size: 11px !important; */
+}
+.postImg{
+  border-radius: 10px;
+  margin-bottom: 30px;
 }

@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types'; 
-import { connect } from 'react-redux';
-import { addPost } from '../../actions/post';
-// import ModalPosts from '../layout/components/ModalPosts';
 import { Button,Input, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, FormText, Label} from 'reactstrap';
 
-
-const PostForm = ({ addPost }, props) => {
+const ModalPosts = (props) => {
   const {
     buttonLabel,
     className
@@ -14,11 +9,10 @@ const PostForm = ({ addPost }, props) => {
 
   const [modal, setModal] = useState(false);
 
-  const toggle = () => setModal(!modal); 
-const [text, setText] = useState('');
+  const toggle = () => setModal(!modal);
+
   return (
-    <div className="post-form">
-   
+    <div>
       <Input  placeholder="Share your Experience!" onClick={toggle}>say saomething say something</Input>
       <Modal isOpen={modal} modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}
         toggle={toggle} className={className}>
@@ -41,32 +35,8 @@ const [text, setText] = useState('');
           <Button color="secondary" onClick={toggle}>Cancel</Button>
         </ModalFooter>
       </Modal>
-    {/* <div className="bg-primary p">
-      <h3>Say Something...</h3>
     </div>
-    <form className="form my-1" onSubmit={e => {
-      e.preventDefault();
-      addPost ({ text });
-      setText('');
-    }}>
-      <textarea
-        name="text"
-        cols="30"
-        rows="5"
-        placeholder="Create a post"
-        value={text}
-        onChange={e => setText(e.target.value)}
-        required
-      ></textarea>
-      <input type="submit" className="btn btn-dark my-1" value="Submit" />
-    </form> */}
-    {/* <ModalPosts /> */}
-  </div>
-  )
+  );
 }
 
-PostForm.propTypes = {
-addPost: PropTypes.func.isRequired
-}
-
-export default connect(null, { addPost })(PostForm) ;
+export default ModalPosts;

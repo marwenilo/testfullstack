@@ -13,10 +13,11 @@ getPosts();
   return loading ? <Spinner /> : ( 
     <Fragment>
       <h1 className="larg text-primary">Posts</h1>
-      <p className="lead">
-        <i className="fas fa-user"></i> Welcome to the community
-      </p>
+     <p className="lead">
+       <i className="fas fa-user"></i> Welcome to the community
+     </p>
       <PostForm />
+      
       <div className="posts">
         {posts.map(post => (
           <PostItem key={post._id} post={post} />

@@ -5,25 +5,41 @@ import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { addLike, removeLike, deletePost } from '../../actions/post';
 
+
+
 const PostItem = ({ addLike, removeLike, deletePost, auth, post:{ _id, text, name, avatar, user, likes, comments, date }, showActions }) =>(
- <div className="post bg-white p-1 my-1">
-          <div>
-            <Link to={`/profile/${user}`}>
+ <div className='Contan' >
+   {/* className="post bg-white p-1 my-1" */}
+  {/* <div> */}
+   {/* <img src='./test.jpg' alt='post img'/> */}
+   
+   {/* <img src='../' alt='img' className="travelImg"/> */}
+   <img className='postImg' src='https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator.com/article/2017/12/06/why-sugar-and-why-so-much-who-investigates-the-food-industry-s-sweet-tooth/7624387-1-eng-GB/Why-sugar-and-why-so-much-WHO-investigates-the-food-industry-s-sweet-tooth_wrbm_large.jpg' alt='img'/>
+          {/* <div> */}
+          
+          <div className='textConta'>
+            
+            <Link className='userConta' to={`/profile/${user}`}>
               <img
-                className="round-img"
+                className="round-imgr"
                 src={avatar}
                 alt="avatar"/>
               <h4>{name}</h4>
             </Link>
-          </div>
-          <div>
-            <p className="my-1">
+           
+          {/* </div>
+          <div> */}
+            <p className='postP2'>
               {text}
             </p>
-             <p className="post-date">
+           
+            </div>
+            <p className='postP'>
                 Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
             </p>
-
+             
+           
+<div className='btnConta'>
             {showActions && <Fragment>
             <button onClick={e => addLike(_id)} type="button" className="btn btn-light">
               <i className="fas fa-thumbs-up"></i> {' '}
@@ -44,10 +60,11 @@ const PostItem = ({ addLike, removeLike, deletePost, auth, post:{ _id, text, nam
             ) }               
 
                   </Fragment>}
-
+                  </div>
             
             
-          </div>
+          {/* </div>
+          </div> */}
         </div>
 );
 

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
+import './profile.css';
 
 import { getProfileById } from '../../actions/profile';
 

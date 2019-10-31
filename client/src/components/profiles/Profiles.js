@@ -3,20 +3,19 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileItem from './profileItem';
-
 import { getProfiles } from '../../actions/profile';
+import './profiles.css';
 
 const Profiles = ({ getProfiles, profile: { profiles, loading }}) => {
     useEffect(()=>{
       getProfiles();
     }, [getProfiles])
-
   return (
-    <Fragment>
-      { loading ? <Spinner /> : <Fragment>
-        <h1 className="large text-primary">Developers</h1>
-        <p className="lead">
-          <i className="fab fa-connectdevelop"></i> Browse and connect with developers
+    <div>
+      { loading ? <Spinner /> : <div>
+        
+        <p className="profileTitle">
+          <i className="fab fa-connectdevelop"></i> Browse and connect with Travelers
         </p>
         <div className="profiles">
           {profiles.length > 0 ? (
@@ -25,8 +24,8 @@ const Profiles = ({ getProfiles, profile: { profiles, loading }}) => {
             ))
           ) : <h4>No Profiles Found ....</h4> }
         </div>
-      </Fragment>}
-    </Fragment>
+      </div>}
+    </div>
   )
 }
 
