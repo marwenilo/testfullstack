@@ -190,6 +190,7 @@ img {
   color: #fff;
 }
 
+
 .btn-success,
 .bg-success,
 .badge-success,
@@ -457,13 +458,35 @@ button {
 
 /* Posts Page */
 .post-form{
-margin: 15% 30%;
+  margin: -2% 30%;
 
 }
 .post-form .post-form-header {
   
   background: var(--primary-color);
   padding: 0.5rem;
+}
+.contanComm{
+  display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 3px 30%;
+    max-width: 620px;
+    padding-bottom: 10px;
+    background-color: azure;
+    -webkit-box-shadow: 0px 0px 19px -3px rgba(97,97,97,0.34);
+    -moz-box-shadow: 0px 0px 19px -3px rgba(97,97,97,0.34);
+    border-radius: 10px;
+    box-shadow: 0px 0px 33px 2px rgba(97,97,97,0.34);
+
+}
+
+.commUser{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .post {
@@ -494,6 +517,7 @@ margin: 15% 30%;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
+
 
 /* Mobile Styles */
 @media (max-width: 700px) {
@@ -554,7 +578,7 @@ margin: 15% 30%;
     width: 200px;
     margin: auto;
   }
-
+ 
   .profile-grid {
     grid-template-areas:
       'top'
@@ -938,3 +962,13 @@ box-shadow: 0px 0px 33px 2px rgba(97,97,97,0.34);
   border-radius: 10px;
   margin-bottom: 30px;
 }
+ .xBtn{
+   width: 60px !important;
+  
+    
+  }
+  .btnContX{
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding-right: 15px;
+  }

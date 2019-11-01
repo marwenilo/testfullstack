@@ -11,17 +11,17 @@ const CommentItem = ({
   deleteComment
 }) => {
   return (
-    <div className="Contan">
+    <div className="contanComm">
           <div className='textConta'>
-            <Link to={`/profile/${user}`}>
+            <Link className='commUser' to={`/profile/${user}`}>
               <img
                 className="round-imgr"
                 src={avatar}
                 alt="avatar"
               />
-              <h4>{name}</h4>
+              <h4 clanssName='commName'>{name}</h4>
             </Link>
-          </div>
+          
           <div>
             <p className='postP2'>
              {text}
@@ -29,12 +29,16 @@ const CommentItem = ({
              <p className='postP'>
                 Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
             </p>
+            </div>
+            </div>
+            <div className='btnContX'>
             {!auth.loading && user === auth.user._id && (
-              <button onClick={ e => deleteComment(postId, _id)} type="button" className="btn btn-danger">
-                <i className="fas fa_timex"></i>
+              <button onClick={ e => deleteComment(postId, _id)} type="button" className="btn btn-danger xBtn">
+                <i className="fas fa-times"></i>
               </button>
             )}
-          </div>
+            </div>
+          
         </div>
   )
 };
