@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import  PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
-import SideBar from './SideBar'
+
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
@@ -37,7 +37,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       </li>
   
   </ul>
-  <SideBar />
+  
   </div>
   );
   const gestLinks  = (
@@ -57,7 +57,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     <Fragment className="navCont">
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav className="navbar navbar-dark">
     <h3 className="navbar-brand">
       <Link className="logos" to="/">Travel Like Nomade</Link>
     </h3>

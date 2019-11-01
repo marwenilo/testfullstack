@@ -100,7 +100,7 @@ const Login = ({ login, isAuthenticated }) => {
                         </div>
                         
                         <div className="p-t-10 centerBtn">
-                            <button className="btn btn--pill btn--green" type="submit"
+                            <button className="btn btn--pill login-button" type="submit"
                             value="Login"
                             >Submit</button>
                         </div>

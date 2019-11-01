@@ -7,14 +7,14 @@ import { addLike, removeLike, deletePost } from '../../actions/post';
 
 
 
-const PostItem = ({ addLike, removeLike, deletePost, auth, post:{ _id, text, name, avatar, user, likes, comments, date }, showActions }) =>(
+const PostItem = ({ addLike, removeLike, deletePost, auth, post:{ _id, description, country, image, name, avatar, user, likes, comments, date }, showActions }) =>(
  <div className='Contan' >
    {/* className="post bg-white p-1 my-1" */}
   {/* <div> */}
    {/* <img src='./test.jpg' alt='post img'/> */}
    
    {/* <img src='../' alt='img' className="travelImg"/> */}
-   <img className='postImg' src='https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator.com/article/2017/12/06/why-sugar-and-why-so-much-who-investigates-the-food-industry-s-sweet-tooth/7624387-1-eng-GB/Why-sugar-and-why-so-much-WHO-investigates-the-food-industry-s-sweet-tooth_wrbm_large.jpg' alt='img'/>
+   <img className='postImg' src={image} alt='img'/>
           {/* <div> */}
           
           <div className='textConta'>
@@ -29,8 +29,11 @@ const PostItem = ({ addLike, removeLike, deletePost, auth, post:{ _id, text, nam
            
           {/* </div>
           <div> */}
+          <h4>
+              {country}
+            </h4>
             <p className='postP2'>
-              {text}
+              {description}
             </p>
            
             </div>

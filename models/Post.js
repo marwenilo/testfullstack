@@ -6,7 +6,15 @@ user: {
   type: Schema.Types.ObjectId,
   ref: 'users'
 },
-text: {
+description: {
+  type: String,
+  required: true
+},
+image: {
+  type: String,
+  required: true
+},
+country: {
   type: String,
   required: true
 },

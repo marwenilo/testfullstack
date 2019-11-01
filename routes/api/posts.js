@@ -5,14 +5,15 @@ const auth = require('../../middleware/auth');
 const Post = require ('../../models/Post');
 const Profile = require ('../../models/Profile');
 const User = require ('../../models/User');
-
 //@route   POST api/posts
 //@desc    Create a post
 //@access  private
 router.post('/',[
   auth, 
   [
-check('text', 'Text is required').not().isEmpty()
+check('description', 'description is required').not().isEmpty(),
+check('image', 'Image is required').not().isEmpty(),
+check('country', 'Country is required').not().isEmpty()
 ]
 ],
 async (req, res)=> {
@@ -26,7 +27,9 @@ try {
   const user = await User.findById(req.user.id).select('-password');
 
   const newPost = new Post ( {
-    text: req.body.text,
+    image: req.body.image,
+    description: req.body.description,
+    country: req.body.country,
     name: user.name,
     avatar: user.avatar,
     user: req.user.id
@@ -39,7 +42,6 @@ try {
   res.status(500).send('ServerError');
 }
 
- 
 });
 
 //@route   GET api/posts
@@ -197,7 +199,6 @@ try {
   
 }
 });
-
 //@route   DELETE api/comment/:id/:comment_id
 //@desc    DELETE a comment on a post
 //@access  private
@@ -222,7 +223,7 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) =>{
     await post.save();
 
     res.json(post.comments);
- 
+
   } catch (err) {
     console.error(err.message);
     if(err.kind === 'ObjectId') {
@@ -232,8 +233,4 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) =>{
     
   }
 } );
-
-
-
-
 module.exports = router;

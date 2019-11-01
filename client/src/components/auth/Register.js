@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , Fragment} from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
@@ -59,65 +59,15 @@ register({ name, email, password });
   };
   return (
 
-
-    // <Fragment>
-    //    <h1 className="large text-primary">Sign Up</h1>
-    //   <p className="lead"><i className="fas fa-user"></i> Create Your Account</p>
-    //   <form className="form" onSubmit={e =>onSubmit(e)}>
-    //     <div className="form-group">
-          // <input type="text" placeholder="Name" 
-          // name="name" 
-          // value={name} 
-          // onChange={e => onChange(e)}
-          // required />
-    //     </div>
-    //     <div className="form-group">
-          // <input type="email" placeholder="Email Address" name="email"
-          //  value={email} 
-          //  onChange={e => onChange(e)}
-          //  required  />
-          // <small className="form-text"
-          //   >This site uses Gravatar so if you want a profile image, use a
-          //   Gravatar email</small>
-    //     </div>
-    //     <div className="form-group">
-          // <input
-          //   type="password"
-          //   placeholder="Password"
-          //   name="password"
-          //   value={password} 
-          //   onChange={e => onChange(e)}
-          //    required 
-          //   minLength="6"
-          // />
-    //     </div>
-    //     <div className="form-group">
-    //       <input
-    //         type="password"
-    //         placeholder="Confirm Password"
-    //         name="password2"
-    //         value={password2} 
-    //        onChange={e => onChange(e)}
-    //        required 
-    //         minLength="6"
-    //       />
-    //     </div>
-    //     <input type="submit" className="btn btn-primary" value="Register" />
-    //   </form>
-    //   <p className="my-1">
-    //     Already have an account? <Link to="/login">Sign In</Link>
-    //   </p>
-    // </Fragment>
-
-
-
     // trye style
 
-<div className="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+ <div className="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins"> 
+ 
 
-{/* <div className="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins"> */}
-        <div className="wrapper wrapper--w780">
-            <div className="card card-3">
+{/* //  <div className="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">   */}
+        <div className="wrapper wrapper--w780 x-container">
+        <div className  ="x-image"></div> 
+            <div className="card card-3 x-body">
                 <div className="card-heading"></div>
                 <div className="card-body">
                     <div className="centerBtn"> <h2 className="title myP">Registration Info</h2> </div>

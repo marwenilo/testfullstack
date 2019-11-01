@@ -503,6 +503,25 @@ input {
   display: table-cell;
   width: 50%;
 }
+.x-container {
+  display : flex
+
+}
+.x-body {
+  flex : 1;
+width : 50%;
+background-color: black !important;
+
+}
+.x-image {
+flex :1 ;
+width : 50%;
+  background: url("./tourf.jpg") top left/cover no-repeat;
+  background-position: 45%;
+  display: table-cell;
+  width: 50%;
+}
+
 
 .card-3 .card-body {
   padding: 57px 65px;
