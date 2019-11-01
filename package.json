@@ -1,7 +1,7 @@
 {
   "name": "fullstacktest",
   "version": "1.0.0",
-  "description": "social net for Ttrav",
+  "description": "social net for Travelers",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -9,7 +9,7 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server \" \"npm run client\""
   },
-  "author": "Marwen Magri",
+  "author": "Marwen Magri, Amira Soltani, Mohamed Hassanet",
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.5.1",
