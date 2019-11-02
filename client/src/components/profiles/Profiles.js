@@ -12,7 +12,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading }}) => {
     }, [getProfiles])
   return (
     <div>
-      { loading ? <Spinner /> : <div>
+      { loading ? <Spinner /> : <div className="profileTitle">
         
         <p className="profileTitle">
           <i className="fab fa-connectdevelop"></i> Browse and connect with Travelers

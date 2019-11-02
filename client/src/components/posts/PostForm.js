@@ -29,7 +29,7 @@ const onSubmit = e => {
  const [text, setText] = useState('');
  return (
    <div className="post-form">
-     <Input  placeholder="Share your Experience!" onClick={toggle}>say saomething say something</Input>
+     <Input  placeholder="Share your Experience!" onClick={toggle} style={{marginBottom:"150px", marginTop:"150px"}}>say saomething say something</Input>
      <Modal isOpen={modal} 
        toggle={toggle} className={className}>
        <ModalHeader toggle={toggle}>Share your Experience</ModalHeader>

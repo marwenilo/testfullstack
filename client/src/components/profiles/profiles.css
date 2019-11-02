@@ -1,7 +1,8 @@
 .profileTitle{
   color:#037367;
   margin: 5rem 0;
-  font-size:40px
+  font-size:40px;
+  text-align:"center" !important;
  }
  .profiles{
   display:flex;
