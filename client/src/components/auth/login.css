@@ -477,7 +477,7 @@ input {
 /* ==========================================================================
    #CARD
    ========================================================================== */
-.e {
+.q {
   overflow: hidden;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -497,8 +497,8 @@ input {
   display: table;
 }
 
-.e .t {
-  background: url("./rio.jpg") top left/cover no-repeat;
+.q .v {
+  background: url("./rio.jpg") top left/cover no-repeat ;
   background-position: 25%;
   display: table-cell;
   width: 50%;

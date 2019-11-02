@@ -7,7 +7,7 @@ const CommentForm = ({ postId, addComment }) => {
   const [text, setText] = useState('');
   return (
     <div className="post-form">
-    <div className="bg-primary p">
+    <div className="p discComm">
       <h3>Leave a Comment</h3>
     </div>
     <form className="form my-1" onSubmit={e => {
@@ -16,6 +16,7 @@ const CommentForm = ({ postId, addComment }) => {
       setText('');
     }}>
       <textarea
+      className="textComm"
         name="text"
         cols="30"
         rows="5"
@@ -24,7 +25,7 @@ const CommentForm = ({ postId, addComment }) => {
         onChange={e => setText(e.target.value)}
         required
       ></textarea>
-      <input type="submit" className="btn btn-dark my-1" value="Submit" />
+      <input type="submit" className="btn btn-dark subComm" value="Submit" />
     </form>
   </div>
   )
