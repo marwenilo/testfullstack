@@ -65,7 +65,7 @@ const Login = ({ login, isAuthenticated }) => {
                 <div className="t"></div>
                 <div className="a"></div>
                 <div className="card-body">
-                    <div className="centerBtn"> <h2 className="title myP">Registration Info</h2> </div>
+                    <div className="centerBtn"> <h2 className="title myP">Log In</h2> </div>
                     
                     <form className="form" onSubmit={e =>onSubmit(e)}>
                         

@@ -9,15 +9,31 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const authLinks = (
     <div className='navbarRight'>
-<ul>
-<li className="nav-item " ><Link to="/profiles">
+    <ul >
+    <li className="nav-item active"><Link className="nav-link"  to="/profiles">
   
-   <span className="nav-link">Profiles</span>
+  Travelers
   
   </Link></li>
+    <li className="nav-item "><Link className="nav-link" to="/posts">Posts</Link></li>
+    <li className="nav-item "><Link  className="nav-link" to="/dashboard">Dashboard</Link></li>
+    <li className="nav-item ">
+      <Link className="nav-link" onClick={logout} href='#!'>
+       
+       logout</Link>
+      </li>
+  </ul>
+  </div>
+//     <div className='navbarRight'>
+// <ul>
+// <li className="nav-item " ><Link to="/profiles">
+  
+//    <span className="nav-link">Travelers</span>
+  
+//   </Link></li>
 
-{/* //hedhi tetbadel lel guestlinks */}
-<li className="nav-item "><Link to="/posts">
+// hedhi tetbadel lel guestlinks
+/* <li className="nav-item "><Link to="/posts">
   
    <span className="nav-link">Posts</span>
   
@@ -38,14 +54,17 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   
   </ul>
   
-  </div>
+  </div> */
+
+
+  
   );
   const gestLinks  = (
     <div className='navbarRight'>
     <ul >
     <li className="nav-item active"><Link className="nav-link"  to="/profiles">
   
-  Developers
+  Travelers
   
   </Link></li>
     <li className="nav-item "><Link className="nav-link" to="/register">Register</Link></li>
