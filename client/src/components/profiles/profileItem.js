@@ -12,7 +12,7 @@ const ProfileItem = ({ profile: {
   status
 }}) => {
   return (
-    <div className="profile">
+    <div className="profile" >
       <img src={avatar} alt="img" className="profilImg"/>
      
         <h2 className="userName" >{name.toUpperCase()}</h2>
@@ -26,7 +26,7 @@ const ProfileItem = ({ profile: {
         <p className="userJob">{status && <span >{status}</span>}</p>
         </div>
         
-        <Link to={`/profile/${_id}`} className="btnProfile"> <span >View Profile</span></Link>
+        <Link to={`/profile/${_id}`}  style={{fontSize:"20px", color:"white"}} className="btnProfile" > View Profile</Link>
     </div>
   )
 }
