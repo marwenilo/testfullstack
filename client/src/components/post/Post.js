@@ -14,7 +14,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
     getPost(match.params.id);
   }, [getPost])
-  return loading || post ===null ? <Spinner /> : <Fragment>
+  return loading || post ===null ? <Spinner /> : <div className='postContai'>
     <Link to='/posts'  className='btn'>Back To Posts </Link>
     <PostItem post={post} showActions={false} />
     <CommentForm postId={post._id} />
@@ -24,7 +24,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
     ))}
 
     </div>
-  </Fragment>
+  </div>
  
 }
 

@@ -65,10 +65,13 @@ register({ name, email, password });
  
 
 {/* //  <div className="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">   */}
-        <div className="wrapper wrapper--w780 x-container">
+        <div className="wrapper wrapper--w780">
+
         <div className  ="x-image"></div> 
-            <div className="card card-3 x-body">
-                <div className="card-heading"></div>
+          <div className="e z">
+            {/* <div className="e"> */}
+                <div className="t"></div>
+                <div className="a"></div>
                 <div className="card-body">
                     <div className="centerBtn"> <h2 className="title myP">Registration Info</h2> </div>
                     
