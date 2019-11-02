@@ -29,16 +29,16 @@ const PostItem = ({ addLike, removeLike, deletePost, auth, post:{ _id, descripti
            
           {/* </div>
           <div> */}
-          <h4>
-              {country}
-            </h4>
+         
             <p className='postP2'>
               {description}
             </p>
            
             </div>
             <p className='postP'>
-                Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
+               from <strong>
+              {country}
+            </strong> Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
             </p>
              
            
