@@ -59,24 +59,29 @@ const Landing = ({ isAuthenticated }) => {
       <p className="title2">What makes us different </p>
 
       <div className="bodySlider"> 
-      <div>
+      <div className="quotes">
       <IconButton style={{ marginBottom:"50px"}}>
       <PublicIcon style ={{width:"60px", height:"60px", color: "#00281f"}}/>
       </IconButton>
       <p className="title3"> Discover the world </p>
-          </div> 
+      <p className="body3">The world is a book, and those who dont travel read only one page </p>   
+    </div> 
 
-      <div> 
+      <div className="quotes"> 
       <IconButton style={{ marginBottom:"50px"}}>
       <ShareIcon style ={{width:"60px", height:"60px", color: "#00281f"}}/>
       </IconButton>
-          <p className="title3"> Share a wealth of experience </p>
+    
+        <p className="title3"> Share a wealth of experience </p>
+        <p className="body3">Make your experience useful and inspire others to travels </p>
           </div> 
-      <div>
+      <div className="quotes">
       <IconButton style={{ marginBottom:"50px"}}>
       <FlightTakeoffIcon style ={{width:"60px", height:"60px", color: "#00281f"}}/>
       </IconButton>
           <p className="title3"> Nothing is easier than travelling </p>
+          <p className="body3">People don't take trips, trips take people! travel is never a matter of money but of courage </p>
+
           </div> 
 
           </div> 
@@ -91,7 +96,7 @@ const Landing = ({ isAuthenticated }) => {
          className="btnx"
           aria-label="add"
         >
-         <Link to="/posts" >View community posts</Link>
+         <Link to="/posts" style={{color:"white", textDecoration:"none"}}>View community posts</Link>
         </Fab>
           </section >
           <section className="travelImages">
@@ -106,7 +111,7 @@ const Landing = ({ isAuthenticated }) => {
          className="btny"
           aria-label="add"
         >
-           <Link to="/register" >sign Up</Link>
+           <Link to="/register" style={{color:"#037367", textDecoration:"none"}}>sign Up</Link>
          
         </Fab>
         

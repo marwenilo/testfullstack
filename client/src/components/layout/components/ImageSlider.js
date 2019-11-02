@@ -4,7 +4,11 @@ const ImageSlider = () => {
     return (
         
         <div className=" slideContainer">
-            <h1 className="slogan">TRAVEL LIKE A NOMAD</h1>
+<div className="slogan">
+            <h1 className="sloganTitle">TRAVEL LIKE A NOMAD</h1>
+            <span className="sloganBody">
+This site is dedicated to the sharing of different travel experiences. Its purpose  is to make members have different informations: good and bad plans concerning countries, different places to visit and not to be missed in the world</span>
+</div>       
             <figure className="slider">
 <img src="https://hdqwalls.com/wallpapers/amazing-beautiful-places.jpg" alt="travel"/>
 <img src="https://i.pinimg.com/originals/aa/fb/86/aafb86fd0e16eae01c4164fb6a368174.jpg" alt="travel"/>
